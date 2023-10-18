@@ -12,6 +12,10 @@ import com.gosty.tryoutapp.core.data.repositories.NumerationRepositoryImpl
 import com.gosty.tryoutapp.core.domain.repository.UserRepository
 import com.gosty.tryoutapp.core.data.repositories.UserRepositoryImpl
 import com.gosty.tryoutapp.core.data.source.remote.RemoteDataSource
+import com.gosty.tryoutapp.core.domain.usecase.NumerationInteractor
+import com.gosty.tryoutapp.core.domain.usecase.NumerationUseCase
+import com.gosty.tryoutapp.core.domain.usecase.UserInteractor
+import com.gosty.tryoutapp.core.domain.usecase.UserUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -98,4 +102,16 @@ object AppModule {
         auth: FirebaseAuth,
         crashlytics: FirebaseCrashlytics
     ): UserRepository = UserRepositoryImpl(auth, crashlytics)
+
+    @Provides
+    @Singleton
+    fun provideUserUseCase(
+        userRepository: UserRepository
+    ) : UserUseCase = UserInteractor(userRepository)
+
+    @Provides
+    @Singleton
+    fun provideNumerationUseCase(
+        numerationRepository: NumerationRepository
+    ) : NumerationUseCase = NumerationInteractor(numerationRepository)
 }

@@ -6,8 +6,9 @@ import com.gosty.tryoutapp.core.domain.models.ScoreModel
 import com.gosty.tryoutapp.core.domain.models.SubjectModel
 import com.gosty.tryoutapp.core.domain.repository.NumerationRepository
 import com.gosty.tryoutapp.core.utils.Result
+import javax.inject.Inject
 
-class NumerationInteractor(private val numerationRepository: NumerationRepository):
+class NumerationInteractor @Inject constructor(private val numerationRepository: NumerationRepository):
     NumerationUseCase {
     override fun getAllNumerationTryouts(): LiveData<Result<List<SubjectModel>>> = numerationRepository.getAllNumerationTryouts()
 

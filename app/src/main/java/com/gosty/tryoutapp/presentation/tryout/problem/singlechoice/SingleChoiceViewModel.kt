@@ -5,13 +5,14 @@ import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.ViewModel
 import com.gosty.tryoutapp.core.domain.models.AnswerModel
 import com.gosty.tryoutapp.core.domain.repository.NumerationRepository
+import com.gosty.tryoutapp.core.domain.usecase.NumerationUseCase
 import com.gosty.tryoutapp.core.utils.Result
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
 class SingleChoiceViewModel @Inject constructor(
-    private val numerationRepository: NumerationRepository
+    private val numerationUseCase: NumerationUseCase
 ) : ViewModel() {
     private val _result = MediatorLiveData<Result<String>>()
     val result: LiveData<Result<String>> get() = _result
@@ -24,7 +25,7 @@ class SingleChoiceViewModel @Inject constructor(
      * Updated Sept 14th, 2023 by Ghifari Octaverin
      */
     fun postAnswer(answerModel: AnswerModel) {
-        val data = numerationRepository.postUserAnswer(answerModel)
+        val data = numerationUseCase.postUserAnswer(answerModel)
         _result.addSource(data) {
             _result.postValue(it)
         }

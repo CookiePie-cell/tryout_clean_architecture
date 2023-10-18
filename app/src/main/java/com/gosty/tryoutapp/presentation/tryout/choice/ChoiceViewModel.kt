@@ -5,13 +5,14 @@ import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.ViewModel
 import com.gosty.tryoutapp.core.domain.models.SubjectModel
 import com.gosty.tryoutapp.core.domain.repository.NumerationRepository
+import com.gosty.tryoutapp.core.domain.usecase.NumerationUseCase
 import com.gosty.tryoutapp.core.utils.Result
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
 class ChoiceViewModel @Inject constructor(
-    private val numerationRepository: NumerationRepository
+    private val numerationUseCase: NumerationUseCase
 ) : ViewModel() {
     private val _tryouts = MediatorLiveData<Result<List<SubjectModel>>>()
     val tryouts: LiveData<Result<List<SubjectModel>>> get() = _tryouts
@@ -23,7 +24,7 @@ class ChoiceViewModel @Inject constructor(
      * Updated Sept 11th, 2023 by Ghifari Octaverin
      */
     fun getSubjects() {
-        val result = numerationRepository.getAllNumerationTryouts()
+        val result = numerationUseCase.getAllNumerationTryouts()
         _tryouts.addSource(result) {
             _tryouts.postValue(it)
         }
