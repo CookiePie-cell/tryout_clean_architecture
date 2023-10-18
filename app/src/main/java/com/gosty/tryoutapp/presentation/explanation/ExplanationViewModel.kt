@@ -2,12 +2,13 @@ package com.gosty.tryoutapp.presentation.explanation
 
 import androidx.lifecycle.ViewModel
 import com.gosty.tryoutapp.core.domain.repository.NumerationRepository
+import com.gosty.tryoutapp.core.domain.usecase.NumerationUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
 class ExplanationViewModel @Inject constructor(
-    private val numerationRepository: NumerationRepository
+    private val numerationUseCase: NumerationUseCase
 ) : ViewModel() {
 
     /***
@@ -15,5 +16,5 @@ class ExplanationViewModel @Inject constructor(
     *   @author Andi
     *   @since September 11th, 2023
     * */
-    fun getSubjectForExplanation() = numerationRepository.getAllNumerationTryoutsForExplanation()
+    fun getSubjectForExplanation() = numerationUseCase.getAllNumerationTryoutsForExplanation()
 }
