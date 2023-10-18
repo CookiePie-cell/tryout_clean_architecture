@@ -11,6 +11,7 @@ import com.gosty.tryoutapp.core.domain.repository.NumerationRepository
 import com.gosty.tryoutapp.core.data.repositories.NumerationRepositoryImpl
 import com.gosty.tryoutapp.core.domain.repository.UserRepository
 import com.gosty.tryoutapp.core.data.repositories.UserRepositoryImpl
+import com.gosty.tryoutapp.core.data.source.remote.RemoteDataSource
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -77,13 +78,19 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideNumerationRepository(
+    fun provideRemoteDataSource(
         apiService: ApiService,
         db: FirebaseDatabase,
         auth: FirebaseAuth,
         crashlytics: FirebaseCrashlytics,
         @ApplicationContext context: Context
-    ): NumerationRepository = NumerationRepositoryImpl(apiService, db, auth, crashlytics, context)
+    ): RemoteDataSource = RemoteDataSource(apiService, db, auth, crashlytics, context)
+
+    @Provides
+    @Singleton
+    fun provideNumerationRepository(
+        remoteDataSource: RemoteDataSource
+    ): NumerationRepository = NumerationRepositoryImpl(remoteDataSource)
 
     @Provides
     @Singleton
