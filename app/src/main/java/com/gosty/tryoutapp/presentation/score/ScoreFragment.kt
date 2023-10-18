@@ -12,9 +12,9 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.gosty.tryoutapp.R
-import com.gosty.tryoutapp.ui.ScoreRecyclerViewAdapter
+import com.gosty.tryoutapp.core.ui.ScoreRecyclerViewAdapter
 import com.gosty.tryoutapp.databinding.FragmentScoreBinding
-import com.gosty.tryoutapp.utils.Result
+import com.gosty.tryoutapp.core.utils.Result
 import com.kennyc.view.MultiStateView
 import dagger.hilt.android.AndroidEntryPoint
 

@@ -1,7 +1,7 @@
 package com.gosty.tryoutapp.presentation.profile
 
 import androidx.lifecycle.ViewModel
-import com.gosty.tryoutapp.domain.repository.NumerationRepository
+import com.gosty.tryoutapp.core.domain.repository.NumerationRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

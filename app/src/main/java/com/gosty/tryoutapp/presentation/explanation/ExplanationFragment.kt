@@ -9,11 +9,11 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.tabs.TabLayout
 import com.gosty.tryoutapp.R
-import com.gosty.tryoutapp.domain.models.QuestionModel
-import com.gosty.tryoutapp.domain.models.ScoreModel
-import com.gosty.tryoutapp.ui.RvExplanationAnswerAdapter
+import com.gosty.tryoutapp.core.domain.models.QuestionModel
+import com.gosty.tryoutapp.core.domain.models.ScoreModel
+import com.gosty.tryoutapp.core.ui.RvExplanationAnswerAdapter
 import com.gosty.tryoutapp.databinding.FragmentExplanationBinding
-import com.gosty.tryoutapp.utils.Utility.resizeImageHtml
+import com.gosty.tryoutapp.core.utils.Utility.resizeImageHtml
 
 class ExplanationFragment : Fragment() {
     private var _binding: FragmentExplanationBinding? = null

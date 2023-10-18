@@ -13,11 +13,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
 import com.gosty.tryoutapp.R
-import com.gosty.tryoutapp.domain.models.TryoutModel
-import com.gosty.tryoutapp.ui.TabPagerProblemAdapter
+import com.gosty.tryoutapp.core.domain.models.TryoutModel
+import com.gosty.tryoutapp.core.ui.TabPagerProblemAdapter
 import com.gosty.tryoutapp.databinding.ActivityProblemBinding
 import com.gosty.tryoutapp.presentation.tryout_done.TryoutDoneActivity
-import com.gosty.tryoutapp.utils.Result
+import com.gosty.tryoutapp.core.utils.Result
 import dagger.hilt.android.AndroidEntryPoint
 import kotlin.time.DurationUnit
 import kotlin.time.toDuration

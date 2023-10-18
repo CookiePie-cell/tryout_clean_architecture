@@ -13,7 +13,7 @@ import com.gosty.tryoutapp.R
 import com.gosty.tryoutapp.databinding.FragmentHomeBinding
 import com.gosty.tryoutapp.presentation.auth.AuthActivity
 import com.gosty.tryoutapp.presentation.tryout.choice.ChoiceActivity
-import com.gosty.tryoutapp.utils.MyTagHandler
+import com.gosty.tryoutapp.core.utils.MyTagHandler
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

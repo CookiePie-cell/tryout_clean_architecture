@@ -7,11 +7,11 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.gosty.tryoutapp.R
-import com.gosty.tryoutapp.domain.models.ScoreModel
+import com.gosty.tryoutapp.core.domain.models.ScoreModel
 import com.gosty.tryoutapp.databinding.ActivityTryoutDoneBinding
 import com.gosty.tryoutapp.presentation.main.MainActivity
-import com.gosty.tryoutapp.utils.Result
-import com.gosty.tryoutapp.utils.Utility
+import com.gosty.tryoutapp.core.utils.Result
+import com.gosty.tryoutapp.core.utils.Utility
 import com.kennyc.view.MultiStateView
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.Date

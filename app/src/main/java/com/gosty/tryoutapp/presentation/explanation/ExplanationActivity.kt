@@ -12,10 +12,10 @@ import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.gosty.tryoutapp.R
-import com.gosty.tryoutapp.domain.models.ScoreModel
-import com.gosty.tryoutapp.ui.ExplanationViewPagerAdapter
+import com.gosty.tryoutapp.core.domain.models.ScoreModel
+import com.gosty.tryoutapp.core.ui.ExplanationViewPagerAdapter
 import com.gosty.tryoutapp.databinding.ActivityExplanationBinding
-import com.gosty.tryoutapp.utils.Result
+import com.gosty.tryoutapp.core.utils.Result
 import com.kennyc.view.MultiStateView
 import dagger.hilt.android.AndroidEntryPoint
 

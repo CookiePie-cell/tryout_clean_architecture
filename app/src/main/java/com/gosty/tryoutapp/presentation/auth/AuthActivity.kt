@@ -15,7 +15,7 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.GoogleAuthProvider
 import com.gosty.tryoutapp.databinding.ActivityAuthBinding
 import com.gosty.tryoutapp.presentation.main.MainActivity
-import com.gosty.tryoutapp.utils.Result
+import com.gosty.tryoutapp.core.utils.Result
 import com.kennyc.view.MultiStateView
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject

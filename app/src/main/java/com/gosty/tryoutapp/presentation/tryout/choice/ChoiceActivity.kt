@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.gosty.tryoutapp.R
 import com.gosty.tryoutapp.databinding.ActivityChoiceBinding
 import com.gosty.tryoutapp.presentation.tryout.problem.ProblemActivity
-import com.gosty.tryoutapp.utils.Result
+import com.gosty.tryoutapp.core.utils.Result
 import com.kennyc.view.MultiStateView
 import dagger.hilt.android.AndroidEntryPoint
 

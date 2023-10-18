@@ -3,9 +3,9 @@ package com.gosty.tryoutapp.presentation.tryout.problem.multiplechoice
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.ViewModel
-import com.gosty.tryoutapp.domain.models.AnswerModel
-import com.gosty.tryoutapp.domain.repository.NumerationRepository
-import com.gosty.tryoutapp.utils.Result
+import com.gosty.tryoutapp.core.domain.models.AnswerModel
+import com.gosty.tryoutapp.core.domain.repository.NumerationRepository
+import com.gosty.tryoutapp.core.utils.Result
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

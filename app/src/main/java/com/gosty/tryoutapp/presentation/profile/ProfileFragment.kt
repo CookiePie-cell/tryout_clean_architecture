@@ -17,7 +17,7 @@ import com.google.firebase.ktx.Firebase
 import com.gosty.tryoutapp.R
 import com.gosty.tryoutapp.databinding.FragmentProfileBinding
 import com.gosty.tryoutapp.presentation.auth.AuthActivity
-import com.gosty.tryoutapp.utils.Result
+import com.gosty.tryoutapp.core.utils.Result
 import com.kennyc.view.MultiStateView
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject

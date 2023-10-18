@@ -11,13 +11,13 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.google.android.material.tabs.TabLayout
 import com.gosty.tryoutapp.R
-import com.gosty.tryoutapp.domain.models.AnswerModel
-import com.gosty.tryoutapp.domain.models.QuestionModel
-import com.gosty.tryoutapp.ui.TabPagerProblemAdapter
+import com.gosty.tryoutapp.core.domain.models.AnswerModel
+import com.gosty.tryoutapp.core.domain.models.QuestionModel
+import com.gosty.tryoutapp.core.ui.TabPagerProblemAdapter
 import com.gosty.tryoutapp.databinding.FragmentEssayBinding
-import com.gosty.tryoutapp.utils.Result
-import com.gosty.tryoutapp.utils.Utility
-import com.gosty.tryoutapp.utils.Utility.resizeImageHtml
+import com.gosty.tryoutapp.core.utils.Result
+import com.gosty.tryoutapp.core.utils.Utility
+import com.gosty.tryoutapp.core.utils.Utility.resizeImageHtml
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
