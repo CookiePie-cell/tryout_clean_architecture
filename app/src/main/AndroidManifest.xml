@@ -17,28 +17,28 @@
         android:theme="@style/Theme.TryoutApp"
         tools:targetApi="31">
         <activity
-            android:name=".ui.tryout_done.TryoutDoneActivity"
+            android:name=".presentation.tryout_done.TryoutDoneActivity"
             android:exported="false"
             android:label="@string/title_activity_try_out_done"
             android:theme="@style/Theme.TryoutApp" />
         <activity
-            android:name=".ui.tryout.problem.ProblemActivity"
+            android:name=".presentation.tryout.problem.ProblemActivity"
             android:exported="false" />
 
         <activity
-            android:name=".ui.tryout.choice.ChoiceActivity"
+            android:name=".presentation.tryout.choice.ChoiceActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.auth.AuthActivity"
+            android:name=".presentation.auth.AuthActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.explanation.ExplanationActivity"
+            android:name=".presentation.explanation.ExplanationActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.main.MainActivity"
+            android:name=".presentation.main.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.splash.SplashActivity"
+            android:name=".presentation.splash.SplashActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>

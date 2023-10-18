@@ -1,19 +1,19 @@
 package com.gosty.tryoutapp.utils
 
-import com.gosty.tryoutapp.data.models.DiscussionModel
-import com.gosty.tryoutapp.data.models.QuestionModel
-import com.gosty.tryoutapp.data.models.SelectionAnswerModel
-import com.gosty.tryoutapp.data.models.SelectionModel
-import com.gosty.tryoutapp.data.models.ShortAnswerModel
-import com.gosty.tryoutapp.data.models.SubjectModel
-import com.gosty.tryoutapp.data.models.TryoutModel
-import com.gosty.tryoutapp.data.remote.responses.DataItemResponse
-import com.gosty.tryoutapp.data.remote.responses.DiscussionItemResponse
-import com.gosty.tryoutapp.data.remote.responses.QuestionItemResponse
-import com.gosty.tryoutapp.data.remote.responses.SelectionAnswerItemResponse
-import com.gosty.tryoutapp.data.remote.responses.SelectionItemResponse
-import com.gosty.tryoutapp.data.remote.responses.ShortAnswerItemResponse
-import com.gosty.tryoutapp.data.remote.responses.TryoutItemResponse
+import com.gosty.tryoutapp.domain.models.DiscussionModel
+import com.gosty.tryoutapp.domain.models.QuestionModel
+import com.gosty.tryoutapp.domain.models.SelectionAnswerModel
+import com.gosty.tryoutapp.domain.models.SelectionModel
+import com.gosty.tryoutapp.domain.models.ShortAnswerModel
+import com.gosty.tryoutapp.domain.models.SubjectModel
+import com.gosty.tryoutapp.domain.models.TryoutModel
+import com.gosty.tryoutapp.data.source.remote.responses.DataItemResponse
+import com.gosty.tryoutapp.data.source.remote.responses.DiscussionItemResponse
+import com.gosty.tryoutapp.data.source.remote.responses.QuestionItemResponse
+import com.gosty.tryoutapp.data.source.remote.responses.SelectionAnswerItemResponse
+import com.gosty.tryoutapp.data.source.remote.responses.SelectionItemResponse
+import com.gosty.tryoutapp.data.source.remote.responses.ShortAnswerItemResponse
+import com.gosty.tryoutapp.data.source.remote.responses.TryoutItemResponse
 
 object DataMapper {
     fun mapDataItemResponseToSubjectModel(input: DataItemResponse?): SubjectModel =

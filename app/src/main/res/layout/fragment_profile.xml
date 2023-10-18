@@ -8,7 +8,7 @@
     app:msv_loadingView="@layout/layout_loading_profile"
     app:msv_errorView="@layout/layout_error_profile"
     app:msv_viewState="content"
-    tools:context=".ui.profile.ProfileFragment">
+    tools:context=".presentation.profile.ProfileFragment">
 
     <FrameLayout
         android:layout_width="match_parent"

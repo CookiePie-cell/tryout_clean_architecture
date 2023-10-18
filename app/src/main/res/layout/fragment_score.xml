@@ -9,7 +9,7 @@
     app:msv_errorView="@layout/layout_error_score"
     app:msv_emptyView="@layout/layout_empty_score"
     app:msv_loadingView="@layout/layout_loading_score"
-    tools:context=".ui.score.ScoreFragment">
+    tools:context=".presentation.score.ScoreFragment">
 
     <FrameLayout
         android:layout_width="match_parent"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark_blue_180B3F"
-    tools:context=".ui.tryout.problem.ProblemActivity">
+    tools:context=".presentation.tryout.problem.ProblemActivity">
 
     <TextView
         android:id="@+id/tv_timer"

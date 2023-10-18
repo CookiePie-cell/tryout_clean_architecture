@@ -6,10 +6,10 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.google.firebase.database.FirebaseDatabase
 import com.gosty.tryoutapp.BuildConfig
-import com.gosty.tryoutapp.data.remote.network.ApiService
-import com.gosty.tryoutapp.data.repositories.NumerationRepository
+import com.gosty.tryoutapp.data.source.remote.network.ApiService
+import com.gosty.tryoutapp.domain.repository.NumerationRepository
 import com.gosty.tryoutapp.data.repositories.NumerationRepositoryImpl
-import com.gosty.tryoutapp.data.repositories.UserRepository
+import com.gosty.tryoutapp.domain.repository.UserRepository
 import com.gosty.tryoutapp.data.repositories.UserRepositoryImpl
 import dagger.Module
 import dagger.Provides

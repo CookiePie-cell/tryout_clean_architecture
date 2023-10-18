@@ -6,8 +6,7 @@ import androidx.lifecycle.MediatorLiveData
 import com.google.firebase.auth.AuthCredential
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.crashlytics.FirebaseCrashlytics
-import com.google.firebase.crashlytics.internal.model.CrashlyticsReport.Session.User
-import com.gosty.tryoutapp.data.models.UserModel
+import com.gosty.tryoutapp.domain.repository.UserRepository
 import com.gosty.tryoutapp.utils.Result
 import javax.inject.Inject
 

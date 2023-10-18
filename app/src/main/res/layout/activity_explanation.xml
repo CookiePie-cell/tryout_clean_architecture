@@ -8,7 +8,7 @@
     app:msv_viewState="content"
     app:msv_loadingView="@layout/layout_loading_explanation"
     app:msv_errorView="@layout/layout_error_explanation"
-    tools:context=".ui.explanation.ExplanationActivity">
+    tools:context=".presentation.explanation.ExplanationActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
