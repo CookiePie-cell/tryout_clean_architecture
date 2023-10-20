@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:padding="16dp"
-    tools:context=".ui.tryout_done.TryoutDoneActivity">
+    tools:context=".presentation.tryout_done.TryoutDoneActivity">
 
     <com.kennyc.view.MultiStateView
         android:id="@+id/state_view"

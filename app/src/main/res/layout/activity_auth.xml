@@ -8,7 +8,7 @@
     android:background="@color/dark_blue_180B3F"
     app:msv_loadingView="@layout/layout_loading_common"
     app:msv_viewState="content"
-    tools:context=".ui.auth.AuthActivity">
+    tools:context=".presentation.auth.AuthActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container"

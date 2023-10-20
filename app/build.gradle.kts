@@ -109,6 +109,9 @@ dependencies {
 
     //swipe refresh layout
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01")
+
+    //livedata
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
 }
 
 kapt {

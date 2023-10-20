@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/dark_blue_180B3F"
-    tools:context=".ui.tryout.problem.multiplechoice.MultipleChoiceFragment">
+    tools:context=".presentation.tryout.problem.multiplechoice.MultipleChoiceFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/content_container"

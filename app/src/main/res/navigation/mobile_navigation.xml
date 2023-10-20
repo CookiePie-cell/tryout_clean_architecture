@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.gosty.tryoutapp.ui.home.HomeFragment"
+        android:name="com.gosty.tryoutapp.presentation.home.HomeFragment"
         android:label="@string/home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/navigation_score"
-        android:name="com.gosty.tryoutapp.ui.score.ScoreFragment"
+        android:name="com.gosty.tryoutapp.presentation.score.ScoreFragment"
         android:label="@string/score"
         tools:layout="@layout/fragment_score" >
         <action
@@ -33,7 +33,7 @@
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.gosty.tryoutapp.ui.profile.ProfileFragment"
+        android:name="com.gosty.tryoutapp.presentation.profile.ProfileFragment"
         android:label="@string/profile"
         tools:layout="@layout/fragment_profile" >
         <action
