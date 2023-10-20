@@ -99,9 +99,8 @@ object AppModule {
     @Provides
     @Singleton
     fun provideUserRepository(
-        auth: FirebaseAuth,
-        crashlytics: FirebaseCrashlytics
-    ): UserRepository = UserRepositoryImpl(auth, crashlytics)
+        remoteDataSource: RemoteDataSource
+    ): UserRepository = UserRepositoryImpl(remoteDataSource)
 
     @Provides
     @Singleton
