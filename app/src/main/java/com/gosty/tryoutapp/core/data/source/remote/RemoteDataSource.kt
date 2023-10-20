@@ -2,10 +2,13 @@ package com.gosty.tryoutapp.core.data.source.remote
 
 import android.content.Context
 import android.net.ConnectivityManager
+import android.util.Log
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.liveData
 import androidx.lifecycle.map
+import com.google.firebase.auth.AuthCredential
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.google.firebase.database.DataSnapshot
@@ -13,6 +16,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.gosty.tryoutapp.BuildConfig
+import com.gosty.tryoutapp.core.data.repositories.UserRepositoryImpl
 import com.gosty.tryoutapp.core.data.source.remote.network.ApiResponse
 import com.gosty.tryoutapp.core.data.source.remote.network.ApiService
 import com.gosty.tryoutapp.core.data.source.remote.responses.DataItemResponse
@@ -27,6 +31,31 @@ class RemoteDataSource(
     private val crashlytics: FirebaseCrashlytics,
     private val context: Context
 ) {
+
+    fun signIn(credential: AuthCredential): LiveData<ApiResponse<String>> {
+        val result = MediatorLiveData<ApiResponse<String>>()
+        result.value = ApiResponse.Fetching
+
+        auth.signInWithCredential(credential)
+            .addOnCompleteListener {
+                if (it.isSuccessful) {
+                    Log.d(UserRepositoryImpl::class.java.simpleName, "signIn: ${auth.currentUser?.displayName}")
+                    result.value = ApiResponse.Success("Berhasil: ${auth.currentUser?.displayName}")
+                } else {
+                    Log.e(UserRepositoryImpl::class.java.simpleName, "signIn: ${it.exception}")
+                    crashlytics.log(it.exception.toString())
+                    result.value = ApiResponse.Error(it.exception.toString())
+                }
+            }
+            .addOnFailureListener {
+                Log.e(UserRepositoryImpl::class.java.simpleName, "signIn: ${it.message.toString()}")
+                crashlytics.log(it.message.toString())
+                result.value = ApiResponse.Error(it.message.toString())
+            }
+
+        return result
+    }
+
     /***
      * This method to get all the numeration tryouts.
      * @author Ghifari Octaverin
