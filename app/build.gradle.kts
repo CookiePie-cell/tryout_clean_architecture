@@ -112,6 +112,12 @@ dependencies {
 
     //livedata
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
+
+    testImplementation("org.mockito:mockito-core:4.4.0")
+    testImplementation("org.mockito:mockito-inline:4.4.0")
+
+    testImplementation("androidx.arch.core:core-testing:2.2.0") // InstantTaskExecutorRule
+
 }
 
 kapt {
