@@ -55,5 +55,54 @@ class ScoreViewModelTest {
         }
     }
 
+    @Test
+    fun `when get Scores Should return the Same Data`() {
+        val observer = Observer<Result<List<ScoreModel>>> {}
+        try {
+            val expectedScore = MutableLiveData<Result<List<ScoreModel>>>()
+            expectedScore.value = Result.Success(dataDummy)
+            `when`(numerationUseCase.getUserListScore()).thenReturn(expectedScore)
 
+            val actualScore = scoreViewModel.getListScore().getOrAwaitValue()
+
+            Mockito.verify(numerationUseCase).getUserListScore()
+
+            val data = (actualScore as Result.Success).data
+
+            assertNotNull(actualScore)
+
+            assertEquals(data[0].scoreId, dataDummy[0].scoreId)
+            assertEquals(data[0].score, dataDummy[0].score)
+            assertEquals(data[0].dateTime, dataDummy[0].dateTime)
+            assertEquals(data[0].totalTime, dataDummy[0].totalTime)
+            assertEquals(data[0].correctAnswer, dataDummy[0].correctAnswer)
+            assertEquals(data[0].wrongAnswer, dataDummy[0].wrongAnswer)
+            assertEquals(data[0].notAnswered, dataDummy[0].notAnswered)
+            assertEquals(data[0].tryoutCategory, dataDummy[0].tryoutCategory)
+            assertEquals(data[0].answers, dataDummy[0].answers)
+        } finally {
+            scoreViewModel.getListScore().removeObserver(observer)
+        }
+    }
+
+    @Test
+    fun `When Network Error Should Return Error`() {
+        val observer = Observer<Result<List<ScoreModel>>> {}
+        val errorMessage = "Error masbrow"
+        try {
+            val expectedScore = MutableLiveData<Result<List<ScoreModel>>>()
+            expectedScore.value = Result.Error(errorMessage)
+            `when`(scoreViewModel.getListScore()).thenReturn(expectedScore)
+
+            val actualScore = scoreViewModel.getListScore().getOrAwaitValue()
+
+            Mockito.verify(numerationUseCase).getUserListScore()
+
+            assertNotNull(actualScore)
+            assertTrue(actualScore is Result.Error)
+            assertEquals((actualScore as Result.Error).error, errorMessage)
+        } finally {
+            scoreViewModel.getListScore().removeObserver(observer)
+        }
+    }
 }
