@@ -76,7 +76,7 @@ class NumerationRepositoryImpl @Inject constructor(
                 is ApiResponse.Fetching -> Result.Loading
                 is ApiResponse.Error -> Result.Error(it.errorMessage)
                 is ApiResponse.Empty -> Result.Success("")
-                is ApiResponse.Success -> Result.Success("")
+                is ApiResponse.Success -> Result.Success("Success")
             }
         }
     }
@@ -125,7 +125,7 @@ class NumerationRepositoryImpl @Inject constructor(
                 is ApiResponse.Fetching -> Result.Loading
                 is ApiResponse.Error -> Result.Error(it.errorMessage)
                 is ApiResponse.Empty -> Result.Success("")
-                is ApiResponse.Success -> Result.Success("")
+                is ApiResponse.Success -> Result.Success("Success")
             }
         }
     }
@@ -143,7 +143,7 @@ class NumerationRepositoryImpl @Inject constructor(
                 is ApiResponse.Fetching -> Result.Loading
                 is ApiResponse.Error -> Result.Error(it.errorMessage)
                 is ApiResponse.Empty -> Result.Success("")
-                is ApiResponse.Success -> Result.Success("")
+                is ApiResponse.Success -> Result.Success("Success")
             }
         }
     }
